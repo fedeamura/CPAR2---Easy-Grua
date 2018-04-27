@@ -13,7 +13,7 @@ Video DEMO
 https://www.youtube.com/watch?v=gt4pxJBr9L4
 
 Aplicacion DEMO
-https://drive.google.com/open?id=1pCyqT0-7R-bDT0vTsKfzcUnlsJolIjvr
+https://drive.google.com/open?id=14OGjdapwBqLPcYJPw9eIzh--5syMPfVG
 
 Version mínima de android
  - Android 4.1 JellyBean (Api 16)
