@@ -25,7 +25,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ScheduledExecutorService;
 
 import federico.amura.cp_grua.DAO.Preferences.PrefLogin;
 import federico.amura.cp_grua.Model.Grua;
@@ -176,6 +179,13 @@ public class ActivityLogin extends AppCompatActivity {
 
                                         //Ya existe
                                         if (docs.size() > 0) {
+
+                                            Map<String, Object> updates = new HashMap<>();
+                                            updates.put("latitud", posicionActual.latitude + "");
+                                            updates.put("longitud", posicionActual.longitude + "");
+                                            FirebaseFirestore.getInstance().collection("usuario").document(docs.get(0).getId()).update(updates);
+
+
                                             PrefLogin.getInstance().setLoginCliente(App.getInstance(), docs.get(0).getId());
                                             App.getInstance().setUsuario(docs.get(0));
                                             App.getInstance().setPosicionActual(posicionActual);
@@ -191,6 +201,8 @@ public class ActivityLogin extends AppCompatActivity {
                                         final Usuario usuario = new Usuario();
                                         usuario.setEmail(email);
                                         usuario.setId(id);
+                                        usuario.setLatitud("" + posicionActual.latitude);
+                                        usuario.setLongitud("" + posicionActual.longitude);
 
                                         FirebaseFirestore.getInstance().collection("usuario")
                                                 .document(id)
@@ -384,6 +396,11 @@ public class ActivityLogin extends AppCompatActivity {
                                 mostrar(mContenedor_Login);
                                 return;
                             }
+
+                            Map<String, Object> updates = new HashMap<>();
+                            updates.put("latitud", posicionActual.latitude + "");
+                            updates.put("longitud", posicionActual.longitude + "");
+                            FirebaseFirestore.getInstance().collection("usuario").document(usuario.getId()).update(updates);
 
                             //Guardo y cierro
                             App.getInstance().setPosicionActual(posicionActual);

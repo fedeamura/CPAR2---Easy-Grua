@@ -339,18 +339,6 @@ public class Fragment_Grua extends Fragment {
                                 );
                             }
 
-
-                            //Marcador mio
-                            if (mapa_MarkerPosicion == null) {
-                                mapa_MarkerPosicion = map.addMarker(new MarkerOptions()
-                                        .position(App.getInstance().getPosicionActual())
-                                        .icon(BitmapDescriptorFactory.fromBitmap(UtilesResources.getInstance().getIconoMarcadorUbicacion(getActivity())))
-                                        .title("Ubicacion actual")
-                                );
-                            } else {
-                                mapa_MarkerPosicion.setPosition(App.getInstance().getPosicionActual());
-                            }
-
                             //Padding
                             int statusBar = UtilesMedidas.getInstance().getStatusBarHeight(getActivity());
                             int navigation = UtilesMedidas.getInstance().getNavigationBarHeight(getActivity());
@@ -392,6 +380,18 @@ public class Fragment_Grua extends Fragment {
 
                             //Centro
                             map.animateCamera(CameraUpdateFactory.newLatLng(App.getInstance().getPosicionActual()));
+                        }
+
+
+                        //Marcador mio
+                        if (mapa_MarkerPosicion == null) {
+                            mapa_MarkerPosicion = map.addMarker(new MarkerOptions()
+                                    .position(App.getInstance().getPosicionActual())
+                                    .icon(BitmapDescriptorFactory.fromBitmap(UtilesResources.getInstance().getIconoMarcadorUbicacion(getActivity())))
+                                    .title("Ubicacion actual")
+                            );
+                        } else {
+                            mapa_MarkerPosicion.setPosition(App.getInstance().getPosicionActual());
                         }
 
 

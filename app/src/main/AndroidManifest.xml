@@ -24,11 +24,17 @@
             android:value="@integer/google_play_services_version"
             tools:replace="android:value" />
 
-        <activity android:name=".UI.Activities.ActivityLogin" />
+        <activity
+            android:name=".UI.Activities.ActivityLogin"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".UI.Activities.ActivityChat" />
+        <activity
+            android:name=".UI.Activities.ActivityChat"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".UI.Activities.ActivityPrincipal">
+        <activity
+            android:name=".UI.Activities.ActivityPrincipal"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
