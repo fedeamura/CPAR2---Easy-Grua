@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Easy Grua</string>
+    <string name="maps_api_key">AIzaSyCdCb0kKEttQkpyQ-gpmBnv3atALryez4k</string>
+    <string name="navigation_api_key">AIzaSyBTn8JUYF72_Eqh-xOPXG6qW4vW4ODVkyE</string>
+</resources>

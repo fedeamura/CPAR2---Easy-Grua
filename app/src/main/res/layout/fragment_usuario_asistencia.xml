@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenedor_Asistencia"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        app:cardCornerRadius="16dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/towing" />
+
+                            <TextView
+                                android:id="@+id/texto_Patente"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="XXX-123"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/texto_Distancia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Distancia: 10km"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+
+                        <TextView
+                            android:id="@+id/texto_Tiempo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="Tiempo restante: 9min"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1" />
+
+
+                        <mehdi.sakout.fancybuttons.FancyButton
+                            android:id="@+id/btn_EnviarMensaje"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            app:fb_borderColor="#FFFFFF"
+                            app:fb_borderWidth="1dp"
+                            app:fb_defaultColor="#7ab800"
+                            app:fb_focusColor="#9bd823"
+                            app:fb_radius="30dp"
+                            app:fb_text="Enviar mensaje"
+                            app:fb_textColor="#FFFFFF" />
+
+                        <mehdi.sakout.fancybuttons.FancyButton
+                            android:id="@+id/btn_CancelarAsistencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            app:fb_borderColor="#FFFFFF"
+                            app:fb_borderWidth="1dp"
+                            app:fb_defaultColor="#E53935"
+                            app:fb_focusColor="#F44336"
+                            app:fb_radius="30dp"
+                            app:fb_text="Cancelar grúa"
+                            app:fb_textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/contenedor_MasOpciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mas opciones..."
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption" />
+
+                        <LinearLayout
+                            android:id="@+id/contenedor_Opciones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:id="@+id/contenedor_Cargando"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardview_light_background"
+                android:visibility="gone">
+
+                <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                    android:id="@+id/determinate_circular_large_progress"
+                    style="@style/Widget.MaterialProgressBar.ProgressBar.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="marcador_w">56dp</dimen>
+    <dimen name="marcador_ubicacion_w">24dp</dimen>
+
+</resources>

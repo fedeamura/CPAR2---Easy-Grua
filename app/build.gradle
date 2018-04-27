@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "federico.amura.cp_grua"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.google.android.gms:play-services-maps:15.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.yarolegovich:discrete-scrollview:1.4.7'
+    compile 'com.google.firebase:firebase-core:15.0.0'
+    compile 'com.google.firebase:firebase-firestore:15.0.0'
+    compile 'com.akexorcist:googledirectionlibrary:1.1.1'
+    compile 'me.zhanghai.android.materialprogressbar:library:1.4.2'
+    compile 'com.github.aarsy.googlemapsanimations:googlemapsanimations:1.0.5'
+    compile 'com.github.medyo:fancybuttons:1.8.4'
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+//    compile 'pl.charmas.android:android-reactive-location2:2.1@aar'
+//    compile 'com.google.android.gms:play-services-location:15.0.0' //you can use newer GMS version if you need
+//    compile 'com.google.android.gms:play-services-places:15.0.0'
+//    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile('com.google.android.gms:play-services-location:15.0.0') {
+        exclude group: 'com.google.android.gms', module: 'play-services-location'
+    }
+    compile('com.yayandroid:LocationManager:2.0.4')
+}
+
+apply plugin: 'com.google.gms.google-services'

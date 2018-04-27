@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenedor_Contenido"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_SolicitarAsistencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="16dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        app:fb_borderWidth="1dp"
+        app:fb_defaultColor="#FFFFFF"
+        app:fb_radius="30dp"
+        app:fb_text="Solicitar grúa"
+        app:fb_textColor="#000000" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_Ajustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="16dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        app:fb_borderWidth="1dp"
+        app:fb_defaultColor="#FFFFFF"
+        app:fb_radius="30dp"
+        app:fb_text=""
+        app:fb_textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imagen_BtnAjustes"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp"
+        android:alpha="0.8"
+        android:elevation="20dp"
+        android:src="@drawable/settings" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_Centrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="72dp"
+        android:elevation="16dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        app:fb_borderWidth="1dp"
+        app:fb_defaultColor="#FFFFFF"
+        app:fb_radius="30dp"
+        app:fb_text=""
+        app:fb_textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/imagen_BtnCerrar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="74dp"
+        android:alpha="0.8"
+        android:elevation="20dp"
+        android:src="@drawable/location" />
+
+
+</RelativeLayout>

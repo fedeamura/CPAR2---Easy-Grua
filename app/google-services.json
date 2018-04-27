@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "719669839632",
+    "firebase_url": "https://cp2018-grua-b441e.firebaseio.com",
+    "project_id": "cp2018-grua",
+    "storage_bucket": "cp2018-grua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719669839632:android:81357e5b8e919d7b",
+        "android_client_info": {
+          "package_name": "federico.amura.cp_grua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719669839632-ch6b680483gin9119i1t2nnq0qtlb83s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnusov5LgxyeesV6noK3IaG5kDU_2BF_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
