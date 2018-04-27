@@ -1,5 +1,5 @@
 # CPAR2 EasyGrua
-Codigo fuente del proyecto para el desafio organizado por San Cristobal para el CPAR2.
+Codigo fuente del proyecto para el desafio organizado por el Grupo San Cristobal para el CPAR2.
 Implementado en Android Nativo.
 
 
